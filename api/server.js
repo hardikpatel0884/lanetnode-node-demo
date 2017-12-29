@@ -10,6 +10,7 @@ const express=require("express");// structure of project
 const hbs=require("hbs");// use for hangle view
 const app=express();
 const fs=require("fs");// require for writing file
+const port=process.env.PORT || 3000;
 
 app.set('view engine','hbs');// setting view engine
 app.use(express.static(__dirname+'/public')); //use files in public directory (localhost:3000/file.html)
@@ -70,4 +71,4 @@ app.get('/about',(req,res)=>{
 });
 
 // start appication
-app.listen(3000);
+app.listen(port);
